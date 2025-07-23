@@ -80,13 +80,73 @@ nav ul{
     font-size: 1.375rem;
 }
 
+.cards{
+    margin: 0 150px;
+}
+
 .card{
     width: 270px;
-    height: 485px;
+    height: 450px;
     text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.card img{
+    width: 100%;
 }
 
 .card-btn{
     width: 270px;
     height: 50px;
 }
+
+.card-section{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 49px;
+    gap: 20px;
+}
+
+.card, .name , .price{
+    margin: 20px 0;
+}
+
+.plant-img{
+    margin: 0 150px;
+    gap: 60px;
+}
+
+.flower-text{
+    font-size: 3.125rem;
+    font-weight: bold;
+}
+
+.flower-text-content{
+    width: 540px;
+    height: 520px;
+    margin: 38px 0;
+}
+
+.trusted-img{
+    width: 285px;
+    height: 285px;
+    position: relative;
+    left: 510px;
+    bottom: -170px;
+}
+
+.flower-plant-section{
+        margin-top: -70px;
+        
+        max-height: 597px;
+}
+
+
+.flower-para li {
+    font-size: 1.375rem;
+    margin: 20px 0;
+}
+
