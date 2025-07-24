@@ -39,9 +39,9 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     background-color: #d45106;
-}
+} */
 
 /* Header Styles */
 .header {
@@ -76,9 +76,9 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+/* nav ul li a:hover {
     color: #E95A08;
-}
+} */
 
 .cart-item a {
     display: flex;
@@ -119,6 +119,9 @@ nav ul li a:hover {
 .hero-text span {
     color: #E95A08;
 }
+span{
+    color: #E95A08;
+}
 
 .hero-para {
     font-size: 1.375rem;
@@ -131,6 +134,7 @@ nav ul li a:hover {
 .cards {
     padding: 60px 150px;
     background-color: #fff;
+    text-align: center;
 }
 
 .plant-text {
@@ -161,20 +165,19 @@ nav ul li a:hover {
 
 .card {
     background-color: #fff;
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); */
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
 }
 
-.card:hover {
+/* .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .card img {
     width: 100%;
@@ -184,30 +187,30 @@ nav ul li a:hover {
 
 .name {
     font-size: 1.2rem;
-    color: #555;
+    color: #111111;
     margin: 15px 0 5px;
+    font-weight: 500;
 }
 
 .price {
-    font-size: 1.5rem;
-    color: #E95A08;
+    font-size: 1.3rem;
     font-weight: bold;
     margin: 5px 0 15px;
 }
 
 .card-btn {
     padding: 12px 0;
-    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 0 0 8px 8px;
     margin-top: auto;
+    font-size: 0.8rem;
 }
 
 /* Flower & Plants Lover Section */
 .flower-plant-section {
     padding: 80px 0;
     background-color: #f9f9fb;
+    margin-top: 210px;
 }
 
 .plant-img {
@@ -281,7 +284,6 @@ nav ul li a:hover {
 
 .section-title {
     font-size: 3.125rem;
-    color: #E95A08;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -375,6 +377,7 @@ nav ul li a:hover {
     background-image: url('../assets/news-letter-bg.png');
     background-size: cover;
     background-position: center;
+    height: 533px;
     padding: 100px 20px;
     color: white;
     text-align: center;
@@ -382,7 +385,7 @@ nav ul li a:hover {
 
 .subscribe-content {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 
 .subscribe-content h2 {
@@ -595,7 +598,9 @@ nav ul li a:hover {
     .banner{
         flex-direction: column-reverse;
     }
-   
+   .flower-plant-section{
+    margin-top: -100px;
+   }
     
     .navbar {
         display: none;
@@ -618,7 +623,7 @@ nav ul li a:hover {
     }
     
     .subscribe-form {
-        flex-direction: column;
+        flex-direction: row;
     }
     
     .subscribe-form input {
