@@ -31,6 +31,10 @@ body {
     display: flex;
 }
 
+.dark-2{
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .btn-primary {
     background-color: #E95A08;
     color: white;
@@ -126,7 +130,6 @@ span{
 .hero-para {
     font-size: 1.375rem;
     line-height: 1.6;
-    color: #555;
     margin-bottom: 30px;
 }
 
@@ -153,7 +156,6 @@ span{
     font-size: 1.375rem;
     max-width: 800px;
     margin: 0 auto;
-    color: #555;
     line-height: 1.5;
 }
 
@@ -255,7 +257,6 @@ span{
 .flower-para li {
     font-size: 1.2rem;
     margin: 15px 0;
-    color: #555;
     line-height: 1.6;
     list-style-type: disc;
     margin-left: 20px;
@@ -290,7 +291,7 @@ span{
 
 .section-description {
     font-size: 1.2rem;
-    color: #555;
+    
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -357,10 +358,10 @@ span{
     transition: all 0.3s ease;
 }
 
-.shop-now-link:hover {
+/* .shop-now-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
-}
+} */
 
 .large-card {
     grid-column: 2;
@@ -439,12 +440,9 @@ span{
     color: #333333; /* Changed from #c0c0c0 to dark gray */
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s ease;
 }
 
-.footer-links ul li a:hover {
-    color: #ff6b00; /* Changed from #fff to orange to match site theme */
-}
+
 
 .footer-logo {
     width: 120px;
@@ -464,12 +462,10 @@ span{
     color: #c0c0c0;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    
 }
 
-.footer-links ul li a:hover {
-    color: #fff;
-}
+
 
 .social-icons {
     display: flex;
@@ -573,13 +569,13 @@ span{
     
     .subscribe-form input {
         width: 100%;
-        border-radius: 5px;
+        
         margin-bottom: 10px;
     }
     
     .subscribe-form button {
         width: 100%;
-        border-radius: 5px;
+        
     }
     
     /* Make footer 2 columns */
@@ -622,17 +618,20 @@ span{
         grid-template-columns: 1fr;
     }
     
-    .subscribe-form {
-        flex-direction: row;
+    .subscribe-form{
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
     }
     
     .subscribe-form input {
-        border-radius: 5px;
+        
         margin-bottom: 10px;
     }
     
     .subscribe-form button {
-        border-radius: 5px;
+        width: 50%;
+        height: 50%;
     }
     
     .trusted-img {
