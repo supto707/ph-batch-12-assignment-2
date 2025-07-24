@@ -1,152 +1,654 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.noto-serif{
-  font-family: "Noto Serif", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
- 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+}
+
+/* Typography Classes */
+.noto-serif {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .inter {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
-
-
-
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
 
 /* Shared Styles */
-
-.flex{
+.flex {
     display: flex;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #E95A08;
     color: white;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.btn-primary:hover {
+    background-color: #d45106;
+}
 
-
-.header{
+/* Header Styles */
+.header {
     justify-content: space-between;
     align-items: center;
-    margin: 30px 150px 120px 150px;
+    padding: 20px 150px;
+    background-color: #f9f9fb;
 }
 
-nav ul li{
-    list-style: none;
+.logo {
+    width: 135px;
+    height: auto;
 }
-nav ul{
+
+.nav-menu {
     display: flex;
     gap: 48px;
+    align-items: center;
 }
-
-
-.banner{
-    margin: 120px 150px 120px 150px;
-}
-
-.hero-text{
-    font-size: 4rem;
-    font-weight: bold;
-}
-
-.hero-para{
-    font-size: 1.375rem;
-}
-
-.plant-text{
-    text-align: center;
-}
-
-.plant-hero{
-    font-size: 3.125rem;
-    font-weight: bold;
-}
-
-.plant-para{
-    font-size: 1.375rem;
-}
-
-.cards{
-    margin: 0 150px;
-}
-
-.card{
-    width: 270px;
-    height: 450px;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-.card img{
-    width: 100%;
-}
-
-.card-btn{
-    width: 270px;
-    height: 50px;
-}
-
-.card-section{
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin-top: 49px;
+.navbar{
     gap: 20px;
 }
 
-.card, .name , .price{
-    margin: 20px 0;
+nav ul li {
+    list-style: none;
 }
 
-.plant-img{
-    margin: 0 150px;
-    gap: 60px;
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.flower-text{
+nav ul li a:hover {
+    color: #E95A08;
+}
+
+.cart-item a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Banner Section */
+.banner {
+    padding: 60px 150px;
+    gap: 40px;
+    align-items: center;
+    background-color: #f9f9fb;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hero-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text span {
+    color: #E95A08;
+}
+
+.hero-para {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Plants Section */
+.cards {
+    padding: 60px 150px;
+    background-color: #fff;
+}
+
+.plant-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.plant-hero {
     font-size: 3.125rem;
     font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.flower-text-content{
-    width: 540px;
-    height: 520px;
-    margin: 38px 0;
+.plant-para {
+    font-size: 1.375rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.5;
 }
 
-.trusted-img{
-    width: 285px;
-    height: 285px;
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 15px 0 5px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #E95A08;
+    font-weight: bold;
+    margin: 5px 0 15px;
+}
+
+.card-btn {
+    padding: 12px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0 0 8px 8px;
+    margin-top: auto;
+}
+
+/* Flower & Plants Lover Section */
+.flower-plant-section {
+    padding: 80px 0;
+    background-color: #f9f9fb;
+}
+
+.plant-img {
+    align-items: center;
+    gap: 60px;
+    padding: 0 150px;
+}
+
+.flower-image-container {
     position: relative;
-    left: 510px;
-    bottom: -170px;
+    width: 45%;
 }
 
-.flower-plant-section{
-        margin-top: -70px;
-        
-        max-height: 597px;
+.flower-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.trusted-img {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 0;
+    right: 0;
+    transform: translate(20%, -20%);
+    z-index: 2;
+}
+
+.flower-text-content {
+    width: 55%;
+}
+
+.flower-text {
+    font-size: 3.125rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
 
 .flower-para li {
-    font-size: 1.375rem;
-    margin: 20px 0;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #555;
+    line-height: 1.6;
+    list-style-type: disc;
+    margin-left: 20px;
 }
+
+.trusted-img {
+    position: absolute;
+    width: 286px;
+    height: auto;
+    
+    left: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Latest Deals Section */
+.latest-deals-section {
+    padding: 80px 150px;
+    background-color: #fff;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 3.125rem;
+    color: #E95A08;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.plant-promotions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.promotion-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.promotion-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.promotion-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.card-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 30px;
+}
+
+.promotion-card h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.shop-now-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.shop-now-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.large-card {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 100%;
+}
+
+.small-card {
+    height: 250px;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+    background-image: url('../assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+}
+
+.subscribe-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subscribe-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.subscribe-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.subscribe-form button {
+    padding: 15px 30px;
+    border-radius: 0 5px 5px 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Footer Section */
+.main-footer {
+    background-color: #ffffff; /* Changed from #222 to white */
+    color: #333333; /* Changed from #c0c0c0 to dark gray for better contrast on white */
+    padding: 80px 150px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+}
+
+.footer-brand p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555555; /* Changed from #999 to darker gray for better contrast */
+    max-width: 300px;
+}
+
+.footer-links ul li a {
+    color: #333333; /* Changed from #c0c0c0 to dark gray */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ff6b00; /* Changed from #fff to orange to match site theme */
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 15px;
+}
+
+.footer-links ul li a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .header, .banner, .cards, .plant-img, .latest-deals-section, .main-footer {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header, .banner, .cards, .plant-img, .latest-deals-section, .main-footer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .card-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero-text {
+        font-size: 3rem;
+    }
+    
+    .plant-hero, .flower-text, .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+/* Update the mobile view media queries */
+@media screen and (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+    }
+    
+    /* Change to 2-column layout for cards on mobile */
+    .card-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .plant-img {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .flower-img, .flower-text-content {
+        width: 100%;
+    }
+    
+    .flower-image-container {
+        width: 100%;
+    }
+    
+    .flower-img {
+        width: 100%;
+        max-height: none;
+        border-radius: 8px;
+    }
+    
+    .trusted-img {
+        display: none; /* Hide the trusted badge on mobile view */
+    }
+    
+    /* Change to 2-column layout for plant promotions */
+    .plant-promotions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .large-card {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+    
+    /* Newsletter mobile adjustments */
+    .subscribe-form {
+        display: block; /* Change from flex to block for stacked layout */
+        max-width: 100%;
+    }
+    
+    .subscribe-form input {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .subscribe-form button {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    /* Make footer 2 columns */
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header, .banner, .cards, .plant-img, .latest-deals-section, .main-footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+    }
+   
+    
+    .navbar {
+        display: none;
+    }
+    
+    .hero-text {
+        font-size: 2rem;
+    }
+    
+    .hero-para, .plant-para {
+        font-size: 1rem;
+    }
+    
+    .plant-hero, .flower-text, .section-title {
+        font-size: 2rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .subscribe-form {
+        flex-direction: column;
+    }
+    
+    .subscribe-form input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .subscribe-form button {
+        border-radius: 5px;
+    }
+    
+    .trusted-img {
+        display: none; /* Hide the trusted badge on mobile view */
+    }
+    
+    /* For very small screens, keep 2 columns but reduce spacing */
+    .card-section {
+        gap: 10px;
+    }
+    
+    .plant-promotions {
+        gap: 10px;
+    }
+    
+    /* Keep footer as 2 columns even on smallest screens */
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+}
+
+
 
