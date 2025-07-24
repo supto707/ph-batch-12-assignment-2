@@ -43,9 +43,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* .btn-primary:hover {
-    background-color: #d45106;
-} */
+
 
 /* Header Styles */
 .header {
@@ -80,9 +78,7 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-/* nav ul li a:hover {
-    color: #E95A08;
-} */
+
 
 .cart-item a {
     display: flex;
@@ -168,18 +164,14 @@ span{
 .card {
     background-color: #fff;
     overflow: hidden;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); */
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+   
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
 }
 
-/* .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-} */
+
 
 .card img {
     width: 100%;
@@ -343,7 +335,7 @@ span{
 }
 
 .promotion-card h2 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     margin-bottom: 20px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -358,10 +350,7 @@ span{
     transition: all 0.3s ease;
 }
 
-/* .shop-now-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-} */
+
 
 .large-card {
     grid-column: 2;
@@ -418,9 +407,9 @@ span{
 
 /* Footer Section */
 .main-footer {
-    background-color: #ffffff; /* Changed from #222 to white */
-    color: #333333; /* Changed from #c0c0c0 to dark gray for better contrast on white */
-    padding: 80px 150px;
+    background-color: #ffffff; 
+    color: #333333; 
+    padding: 50px 150px;
 }
 
 .footer-container {
@@ -432,12 +421,12 @@ span{
 .footer-brand p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555555; /* Changed from #999 to darker gray for better contrast */
+    color: #555555; 
     max-width: 300px;
 }
 
 .footer-links ul li a {
-    color: #333333; /* Changed from #c0c0c0 to dark gray */
+    color: #333333; 
     text-decoration: none;
     font-size: 1rem;
 }
@@ -446,8 +435,10 @@ span{
 
 .footer-logo {
     width: 120px;
-    margin-bottom: 20px;
+    
 }
+
+
 
 .footer-links ul {
     list-style: none;
@@ -456,12 +447,14 @@ span{
 
 .footer-links ul li {
     margin-bottom: 15px;
+    
 }
 
 .footer-links ul li a {
     color: #c0c0c0;
     text-decoration: none;
     font-size: 1rem;
+    
     
 }
 
@@ -515,13 +508,13 @@ span{
     }
 }
 
-/* Update the mobile view media queries */
+
 @media screen and (max-width: 768px) {
     .banner {
         flex-direction: column;
     }
     
-    /* Change to 2-column layout for cards on mobile */
+    
     .card-section {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -547,38 +540,39 @@ span{
     }
     
     .trusted-img {
-        display: none; /* Hide the trusted badge on mobile view */
+        display: none; 
     }
     
-    /* Change to 2-column layout for plant promotions */
+    
     .plant-promotions {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
         gap: 15px;
     }
     
-    .large-card {
-        grid-column: span 2;
+    .large-card, .small-card {
+        grid-column: auto;
         grid-row: auto;
+        width: 100%;
+        height: 200px; 
     }
     
-    /* Newsletter mobile adjustments */
+    
     .subscribe-form {
-        display: block; /* Change from flex to block for stacked layout */
+        display: block;
         max-width: 100%;
     }
     
     .subscribe-form input {
         width: 100%;
-        
         margin-bottom: 10px;
     }
     
     .subscribe-form button {
         width: 100%;
-        
     }
     
-    /* Make footer 2 columns */
+  
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -635,10 +629,10 @@ span{
     }
     
     .trusted-img {
-        display: none; /* Hide the trusted badge on mobile view */
+        display: none; 
     }
     
-    /* For very small screens, keep 2 columns but reduce spacing */
+    
     .card-section {
         gap: 10px;
     }
@@ -647,7 +641,7 @@ span{
         gap: 10px;
     }
     
-    /* Keep footer as 2 columns even on smallest screens */
+
     .footer-container {
         grid-template-columns: repeat(1, 1fr);
         gap: 15px;
